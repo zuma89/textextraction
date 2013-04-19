@@ -10,4 +10,15 @@ def populate(codefile):
     '''
 
     #skip over the header
-    line = codefile.readline();
+    line = codefile.readline()
+    
+    
+    code = []
+
+    for n in codefile :
+    	#search for the opcode file and append to code
+    	opcode = 0
+
+    	for opcode in n :
+    		 
+
