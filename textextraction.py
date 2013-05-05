@@ -22,7 +22,7 @@ def populate(codefile):
         #search for the opcode file and append to code
         opcode = 0
 
-        for i in range(len(n)-1):
+        for opcode in range(len(n)-1):
             code.append((n[i], n[i+1]))
         return code
 
