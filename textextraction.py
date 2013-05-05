@@ -12,7 +12,7 @@ def populate(codefile):
     '''
 
     #skip over the header
-    line = codefile.readline()
+    asm = open(codefile).read()
 
     opcode_list = ["mov", "equ", "proc", "neg", "add", "push", "jmp", "dec", "int", "cmp", "call", "or", "pop", "rep", "xor", "out", "in", "db", "sub", "lea", "jne", "retf", "sub", "sbb", "clc", "xchg", "jb", "dw", "je"]
     
@@ -22,10 +22,9 @@ def populate(codefile):
         #search for the opcode file and append to code
         opcode = 0
 
-        for opcode in n :
-
-            if opcode == opcode_list :
-                print code
+        for i in range(len(n)-1):
+            code.append((n[i], n[i+1]))
+        return code
 
                    
 
